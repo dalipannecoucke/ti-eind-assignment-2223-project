@@ -1,0 +1,77 @@
+@base_URL=http://localhost:3000/api/songs
+
+get {{base_URL}}
+
+###
+post {{base_URL}}
+Content-Type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDZiM2Y4M2ZlNmFhNzdlNDY2YTYzYTMiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODQ3NTYwNTF9.zbxbuCC_5xoW8APwE8mjwYUV0e5L1AcSZyzfPkmuwq0
+
+{    
+    "title": "Ocean Eyes",
+    "genreId": "646b4c32ac464a40bdfd32c5",
+    "artistId":"646b6e5c12baf9c9e710c4d9",
+    "album": "none",
+    "songtext": "Ive been watchin you for some time  Cant stop starin at those ocean eyes  Burning cities and napalm skies  Fifteen flares inside those ocean eyes  Your ocean eyes  No fair  You really know how to make me cry  When you gimme those ocean eyes   Im scared   Ive never fallen from quite this high  Fallin into your ocean eyes Those ocean eyes  Ive been walkin through a world gone blind   Cant stop thinkin of your diamond mind  Careful creature made friends with time  He left her lonely with a diamond mind  And those ocean eyes  No fair  You really know how to make me cry  When you gimme those ocean eyes  Im scared  Ive never fallen from quite this high   Fallin into your ocean eyes  Those ocean eyes  Da, da-da, da-da  Da-da-da, da, da Da, da, da, da, da-da-da-da   Mm Mm Mm No fair   You really know how to make me cry  When you gimme those ocean eyes  Im scared  Ive never fallen from quite this high  Fallin into your ocean eyes Those ocean eyes",
+    "releaseDate": "2016-11-18",
+    "duration": "3:20"
+}
+
+###
+post {{base_URL}}
+Content-Type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDZiM2Y4M2ZlNmFhNzdlNDY2YTYzYTMiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODQ3NTYwNTF9.zbxbuCC_5xoW8APwE8mjwYUV0e5L1AcSZyzfPkmuwq0
+
+{    
+    "title": "Test Delete",
+    "genreId": "646b4c32ac464a40bdfd32c5",
+    "artistId":"646b6e5c12baf9c9e710c4d9",
+    "album": "none",
+    "songtext": "test delete",
+    "releaseDate": "2016-11-18",
+    "duration": "3:20"
+}
+
+###
+@objId1=646b85f6651713403a83be82
+get {{base_URL}}/{{objId1}}
+Content-Type: application/json
+
+###
+@objId2=646b85f6651713403a83be82
+put {{base_URL}}/{{objId2}}
+Content-Type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDZiM2Y4M2ZlNmFhNzdlNDY2YTYzYTMiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODQ3NTYwNTF9.zbxbuCC_5xoW8APwE8mjwYUV0e5L1AcSZyzfPkmuwq0
+
+{
+    "title": "Ocean Eyes",
+    "genreId": "646b4c10ac464a40bdfd32c1",
+    "artistId":"646b6e5c12baf9c9e710c4d9",
+    "album": "none",
+    "songtext": "Ive been watchin you for some time  Cant stop starin at those ocean eyes  Burning cities and napalm skies  Fifteen flares inside those ocean eyes  Your ocean eyes  No fair  You really know how to make me cry  When you gimme those ocean eyes   Im scared   Ive never fallen from quite this high  Fallin into your ocean eyes Those ocean eyes  Ive been walkin through a world gone blind   Cant stop thinkin of your diamond mind  Careful creature made friends with time  He left her lonely with a diamond mind  And those ocean eyes  No fair  You really know how to make me cry  When you gimme those ocean eyes  Im scared  Ive never fallen from quite this high   Fallin into your ocean eyes  Those ocean eyes  Da, da-da, da-da  Da-da-da, da, da Da, da, da, da, da-da-da-da   Mm Mm Mm No fair   You really know how to make me cry  When you gimme those ocean eyes  Im scared  Ive never fallen from quite this high  Fallin into your ocean eyes Those ocean eyes",
+    "releaseDate": "2016-11-18",
+    "duration": "3:20"
+}
+
+###
+@objId3=646d1aa32f98ffa5fdece0e8
+delete {{base_URL}}/{{objId3}}
+Content-Type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDZiM2Y4M2ZlNmFhNzdlNDY2YTYzYTMiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODQ3NTYwNTF9.zbxbuCC_5xoW8APwE8mjwYUV0e5L1AcSZyzfPkmuwq0
+
+
+###
+@genreId=646b4c10ac464a40bdfd32c1
+get {{base_URL}}/genres/{{genreId}}
+Content-Type: application/json
+
+###
+@artistId=646b6e5c12baf9c9e710c4d9
+get {{base_URL}}/artists/{{artistId}}
+Content-Type: application/json
+
+
+###
+@songId=646b85f6651713403a83be82
+get {{base_URL}}/favorites/{{songId}}/users
+Content-Type: application/json

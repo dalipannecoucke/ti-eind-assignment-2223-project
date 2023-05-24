@@ -1,0 +1,20 @@
+@base_URL=http://localhost:3000/api/auth
+
+
+###
+post {{base_URL}}
+Content-Type: application/json
+
+{
+    "email": "dali@vives.be",
+    "password": "12345"
+}
+
+###
+post {{base_URL}}
+Content-Type: application/json
+
+{
+    "email": "docent@vives.be",
+    "password": "12345"
+}

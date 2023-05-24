@@ -1,0 +1,65 @@
+# USER REGISTRATION #
+# Variables
+@base_URL=http://localhost:3000/api/users
+
+###
+post {{base_URL}}
+Content-Type: application/json
+
+    //"name": "Vives", //5 to 50 string required
+    //"email": "docent@vives.be", //5 to 255 string required
+    //"password": "12345" //5 to 1024 string required
+{
+    "name": "Vives10", 
+    "email": "docent10@vives.be",
+    "password": "12345"
+}
+
+###
+post {{base_URL}}
+Content-Type: application/json
+
+    //"name": "Vives", //5 to 50 string required
+    //"email": "docent@vives.be", //5 to 255 string required
+    //"password": "12345" //5 to 1024 string required
+{
+    "name": "Vives9", 
+    "email": "docent9@vives.be",
+    "password": "12345"
+}
+
+###
+post {{base_URL}}
+Content-Type: application/json
+
+    //"name": "Vives", //5 to 50 string required
+    //"email": "docent@vives.be", //5 to 255 string required
+    //"password": "12345" //5 to 1024 string required
+{
+    "name": "Dali Pannecoucke", 
+    "email": "dali@vives.be",
+    "password": "12345"
+}
+
+###
+@objectID=646d2274ca98123c4cbcd091
+delete {{base_URL}}/{{objectID}}
+Content-Type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDZiM2Y4M2ZlNmFhNzdlNDY2YTYzYTMiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODQ3NTQ3NTV9.nMw1n2P8Qwa4dUNhpKM6PxPxPCQJZxE_BFlAjuL0Ny4
+
+###
+@songID=646b85f6651713403a83be82
+post {{base_URL}}/favorites/{{songID}}
+Content-Type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDZiM2Y4M2ZlNmFhNzdlNDY2YTYzYTMiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODQ3NTQ3NTV9.nMw1n2P8Qwa4dUNhpKM6PxPxPCQJZxE_BFlAjuL0Ny4
+
+###
+get {{base_URL}}/favorites
+Content-Type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDZiM2Y4M2ZlNmFhNzdlNDY2YTYzYTMiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODQ3NTQ3NTV9.nMw1n2P8Qwa4dUNhpKM6PxPxPCQJZxE_BFlAjuL0Ny4
+
+###
+@songID2=646b85f6651713403a83be82
+delete {{base_URL}}/favorites/{{songID2}}
+Content-Type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDZiM2Y4M2ZlNmFhNzdlNDY2YTYzYTMiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODQ3NTQ3NTV9.nMw1n2P8Qwa4dUNhpKM6PxPxPCQJZxE_BFlAjuL0Ny4

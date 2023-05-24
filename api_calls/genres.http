@@ -1,0 +1,70 @@
+@base_URL=http://localhost:3000/api/genres
+
+get {{base_URL}}
+
+###
+post {{base_URL}}
+Content-Type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDZiM2Y4M2ZlNmFhNzdlNDY2YTYzYTMiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODQ3NTMyNDB9.aweGv6JJquKG6FPdY12YAy67wv988zS4dUGpOnpIQrE
+
+{
+    "name": "pop"
+}
+
+###
+post {{base_URL}}
+Content-Type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDZiM2Y4M2ZlNmFhNzdlNDY2YTYzYTMiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODQ3NTQ3NTV9.nMw1n2P8Qwa4dUNhpKM6PxPxPCQJZxE_BFlAjuL0Ny4
+
+{
+    "name": "rock"
+}
+
+###
+post {{base_URL}}
+Content-Type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDZiM2Y4M2ZlNmFhNzdlNDY2YTYzYTMiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODQ3NTMyNDB9.aweGv6JJquKG6FPdY12YAy67wv988zS4dUGpOnpIQrE
+
+{
+    "name": "country"
+}
+
+###
+post {{base_URL}}
+Content-Type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDZiM2Y4M2ZlNmFhNzdlNDY2YTYzYTMiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODQ3NTMyNDB9.aweGv6JJquKG6FPdY12YAy67wv988zS4dUGpOnpIQrE
+
+{
+    "name": "jazz"
+}
+
+###
+post {{base_URL}}
+Content-Type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDZiM2Y4M2ZlNmFhNzdlNDY2YTYzYTMiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODQ3NTMyNDB9.aweGv6JJquKG6FPdY12YAy67wv988zS4dUGpOnpIQrE
+
+{
+    "name": "onbestaand genre"
+}
+
+###
+@objId2=646b4d99ac464a40bdfd32c9
+put {{base_URL}}/{{objId2}}
+Content-Type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDZiM2Y4M2ZlNmFhNzdlNDY2YTYzYTMiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODQ3NTU0MDZ9.gqBuM6NspC_iuUII-tt62OpOeQZ4-q3vJCzirhgtn-I
+
+{
+    "name": "genre10"
+}
+
+###
+@objId3=646b4d99ac464a40bdfd32c9
+delete {{base_URL}}/{{objId3}}
+Content-Type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDZiM2Y4M2ZlNmFhNzdlNDY2YTYzYTMiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODQ3NTU0MDZ9.gqBuM6NspC_iuUII-tt62OpOeQZ4-q3vJCzirhgtn-I
+
+###
+@objId2=646b4c32ac464a40bdfd32c5
+get {{base_URL}}/{{objId2}}
+Content-Type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDZiM2Y4M2ZlNmFhNzdlNDY2YTYzYTMiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODQ3NTU0MDZ9.gqBuM6NspC_iuUII-tt62OpOeQZ4-q3vJCzirhgtn-I

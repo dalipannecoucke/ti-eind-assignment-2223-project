@@ -1,0 +1,68 @@
+@base_URL=http://localhost:3000/api/artists
+
+get {{base_URL}}
+
+###
+post {{base_URL}}
+Content-Type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDZiM2Y4M2ZlNmFhNzdlNDY2YTYzYTMiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODQ3NTYwNTF9.zbxbuCC_5xoW8APwE8mjwYUV0e5L1AcSZyzfPkmuwq0
+
+{    
+  "name": "Michael Jackson",
+  "birthdate": "1958-08-29",
+  "country": "United States"
+}
+
+###
+put {{base_URL}}/646d082948d8bf2b15a1cfdb
+Content-Type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDZiM2Y4M2ZlNmFhNzdlNDY2YTYzYTMiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODQ3NTYwNTF9.zbxbuCC_5xoW8APwE8mjwYUV0e5L1AcSZyzfPkmuwq0
+
+{    
+  "name": "Michael",
+  "birthdate": "1958-08-29",
+  "country": "United States"
+}
+
+###
+delete {{base_URL}}/646d064007ef812b8f411664
+Content-Type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDZiM2Y4M2ZlNmFhNzdlNDY2YTYzYTMiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODQ3NTYwNTF9.zbxbuCC_5xoW8APwE8mjwYUV0e5L1AcSZyzfPkmuwq0
+
+###
+post {{base_URL}}
+Content-Type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDZiM2Y4M2ZlNmFhNzdlNDY2YTYzYTMiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODQ3NTYwNTF9.zbxbuCC_5xoW8APwE8mjwYUV0e5L1AcSZyzfPkmuwq0
+
+{    
+  "name": "Billie Eilish",
+  "birthdate": "2001-12-18",
+  "country": "United States"
+}
+
+###
+post {{base_URL}}
+Content-Type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDZiM2Y4M2ZlNmFhNzdlNDY2YTYzYTMiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODQ3NTYwNTF9.zbxbuCC_5xoW8APwE8mjwYUV0e5L1AcSZyzfPkmuwq0
+
+{    
+  "name": "Ed Sheeran",
+  "birthdate": "1991-02-17",
+  "country": "United Kingdom"
+}
+
+###
+post {{base_URL}}
+Content-Type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDZiM2Y4M2ZlNmFhNzdlNDY2YTYzYTMiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODQ3NTYwNTF9.zbxbuCC_5xoW8APwE8mjwYUV0e5L1AcSZyzfPkmuwq0
+
+{    
+  "name": "Pommelien Thijs",
+  "birthdate": "2001-04-04",
+  "country": "België"
+}
+
+###
+@objId1=646b6f4112baf9c9e710c4db
+get {{base_URL}}/{{objId1}}
+Content-Type: application/json
