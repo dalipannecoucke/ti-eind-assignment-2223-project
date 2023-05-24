@@ -2,6 +2,8 @@ const Joi = require('joi');
 Joi.objectId = require('joi-objectid')(Joi);
 const mongoose = require('mongoose');
 
+const PORT = process.env.PORT || 3000;
+
 const genres = require('./routes/genres');
 /*
 const customers = require('./routes/customers');
@@ -25,9 +27,29 @@ if (!config.get('jwtPrivateKey')){
   process.exit(1);
 }
 
-mongoose.connect('mongodb://127.0.0.1/songbook')
+/*
+mongoose.set('strictQuery', false);
+const connectDB = async ()=> {
+  try {
+    const conn = await mongoose.connect(process.env.MONGO_URI);
+    console.log(`MongoDB connected:  ${conn.connection.host}`);
+  } catch (error) {
+    console.log(error);
+    process.exit(1);
+  }
+}
+
+connectDB().then(() => {
+  app.listen(PORT, () => {
+    console.log(`Listening on port ${PORT} ...`)
+  })
+});
+*/
+
+mongoose.connect('mongodb://0.0.0.0/songbook')
   .then(() => console.log('Connected to MongoDB...'))
   .catch(err => console.error('Could not connect to MongoDB...'));
+
 
 app.use(express.json());
 //...
@@ -36,6 +58,7 @@ app.use('/api/genres', genres);
 app.use('/api/auth', auth);
 app.use('/api/artists', artists);
 app.use('/api/songs', songs);
+
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Listening on port ${port}...`));
